@@ -3,10 +3,16 @@ package com.epam.rd.autotasks.meetastranger;
 import java.util.Scanner;
 
 public class MeetAStranger {
+    final static int password = 133976; //You can change pass, but don't change the type
+
     public static void main(String[] args) {
-        //Write a program, which read a String from System.in and print "Hello, <input string>"
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        System.out.println("Hello, " + input);
+        if (input.equals("" + password)) {
+            System.out.println("Hello, Agent");
+        } else {
+            System.out.println("Access denied");
+        }
     }
 }
+
